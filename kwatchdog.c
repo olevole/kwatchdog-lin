@@ -6,7 +6,7 @@
 #include<linux/sched.h>
 #include <linux/reboot.h>
 
-MODULE_LICENSE("GPL");
+MODULE_LICENSE("BSD");
 
 #define PROCFS_MAX_SIZE         4
 
