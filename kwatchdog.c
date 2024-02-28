@@ -59,6 +59,10 @@ static ssize_t kwatchdog_write(struct file *file, const char *buf, size_t len, l
 		pr_info("ko = %d\n", ret);
 		return ret;
 	}
+	if ( res == 0 ) {
+		// we'll freeze immediately
+		kernel_restart("kwatchdog");
+	}
 	*data= len;
 	pr_info("Change Software Timer to: %llu\n", res);
 	kwatcher_count_critical = res;

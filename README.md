@@ -5,12 +5,17 @@ for FreeBSD: https://github.com/olevole/kwatchdog
 
 # Usage
 
-resets the timer:
+to resets the timer:
 ```
 cat /proc/kwatchdog
 ```
 
-set new interval:
+to set/update timer interval (set 180 seconds instead of 60 (by default)):
 ```
-echo "180" > /proc/kwatchdog
+echo '180' > /proc/kwatchdog
+```
+
+or freeze immediately:
+```
+echo '0' > /proc/kwatchdog
 ```
